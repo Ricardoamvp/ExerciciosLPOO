@@ -15,7 +15,11 @@ public class Teste {
 
         //agenda.removePessoa("Ricardo");
 
-        agenda.buscaPessoa("Marco");
+        int busca = agenda.buscaPessoa("Marco");
+        System.out.println(busca == -1 ? "Não existe" : busca);
+
+        agenda.imprimeAgenda();
+        agenda.imprimeContato(2);
 
     }
 

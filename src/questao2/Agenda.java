@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Agenda {
 
     private List<Pessoa> contatos;
@@ -33,15 +34,24 @@ public class Agenda {
 
     }
 
-    //Tem que ser int e não void
-    public void buscaPessoa(String nome){
+
+    public int buscaPessoa(String nome){
         for(int i = 0; i < contatos.size(); i++){
             Pessoa contato = contatos.get(i);
             if(contato.getNome().equals(nome)){
-                System.out.println(i);
+                return i;
             }
 
         }
+        return -1;
+    }
+
+    public void imprimeAgenda(){
+        System.out.println(contatos);
+    }
+
+    public void imprimeContato(int index){
+        System.out.println(contatos.get(index));
     }
 
 
